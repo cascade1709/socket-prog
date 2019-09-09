@@ -12,7 +12,6 @@ io.on("connection", skt => {
   console.log("a user connected", skt.id);
   skt.on("fileName", file => {
     skt.join(file.fileName);
-    socketlist[file.fileName] = skt;
   });
 });
 
